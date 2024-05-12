@@ -12,25 +12,20 @@ import hezou.services.ClientService;
  * @author BEKE hezou
  */
 public class ClientMbean {
-    
-    private ClientService clientService; 
-
-    public ClientService getClientService() {
-        return clientService;
+    private ClientService clientService;
+  public void addFourClients() {
+        // Ajoutez quatre clients avec des informations différentes
+        addClient("Doe", "John", "123456789");
+        addClient("Smith", "Alice", "987654321");
+        addClient("Johnson", "Michael", "555555555");
+        addClient("Brown", "Emma", "999999999");
     }
 
-  
-    public void setClientService(ClientService clientService) {
-        this.clientService = clientService;
-    }
-
-
-    public void addClient(String nom, String prenom , String telephone) {
+    private void addClient(String nom, String prenom, String telephone) {
         Client client = new Client();
         client.setNom(nom);
         client.setPrenom(prenom);
         client.setTelephone(telephone);
         clientService.addClient(client);
     }
-    
 }

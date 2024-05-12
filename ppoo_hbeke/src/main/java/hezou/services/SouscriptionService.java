@@ -4,6 +4,8 @@
  */
 package hezou.services;
 
+import hezou.entities.Client;
+import hezou.entities.Produit;
 import hezou.entities.Souscription;
 import java.util.List;
 
@@ -25,4 +27,6 @@ public interface SouscriptionService {
     List<Souscription> getSouscriptionsByClientId(int iclient);
     
     List<Souscription> getAllSouscriptions();
+
+    public void souscrireProduit(Client client1, Produit epargne);
 }

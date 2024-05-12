@@ -14,16 +14,8 @@ import java.util.List;
 public interface ProduitService {
      
     void addProduit(Produit produit);
-    
-    
-    void updateProduit(Produit produit);
-    
-   
-    void deleteProduit(int idProduit);
-    
-    
-    Produit getProduitById(int idProduit);
-    
-    
+
     List<Produit> getAllProduits();
+
+    public Produit getProduitByName(String epargne);
 }

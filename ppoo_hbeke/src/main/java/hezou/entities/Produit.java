@@ -12,16 +12,19 @@ public class Produit {
     
     private int idProduit;
     private String libelle;
-    private String actif;
+     private boolean actif;
+     
+     public Produit(String libelle, boolean actif) {
+        this.libelle = libelle;
+        this.actif = actif;
+    }
 
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;
     }
 
-    public void setActif(String actif) {
-        this.actif = actif;
-    }
+  
 
     public int getIdProduit() {
         return idProduit;
@@ -37,8 +40,13 @@ public class Produit {
         return libelle;
     }
 
-    public String getActif() {
+    public boolean isActif() {
         return actif;
     }
+
+    public void setActif(boolean actif) {
+        this.actif = actif;
+    }
+
     
 }

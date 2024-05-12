@@ -18,7 +18,7 @@ public class Connexion {
     private static final String MOT_DE_PASSE = "";
 
    
-    public static Connection obtenirConnexion() {
+    public static Connection getConnexion() {
         Connection connexion = null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
