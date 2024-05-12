@@ -4,10 +4,22 @@
  */
 package hezou.services;
 
+import hezou.entities.Client;
+import java.util.List;
+
 /**
  *
  * @author BEKE hezou
  */
 public interface ClientService {
     
+    void ajouterClient(Client client);
+    
+    Client getClientById(int idClient);
+    
+    List<Client> getAllClients();
+ 
+    void updateClient(Client client);
+    
+    void deleteClient(int idClient);
 }

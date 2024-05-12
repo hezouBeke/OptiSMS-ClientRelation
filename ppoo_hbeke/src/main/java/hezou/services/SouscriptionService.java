@@ -4,10 +4,25 @@
  */
 package hezou.services;
 
+import hezou.entities.Souscription;
+import java.util.List;
+
 /**
  *
  * @author BEKE hezou
  */
 public interface SouscriptionService {
     
+    void addSouscription(Souscription souscription);
+    
+    void updateSouscription(Souscription souscription);
+    
+    void deleteSouscription(int Id);
+
+    Souscription getSouscriptionById(int Id);
+    
+ 
+    List<Souscription> getSouscriptionsByClientId(int iclient);
+    
+    List<Souscription> getAllSouscriptions();
 }

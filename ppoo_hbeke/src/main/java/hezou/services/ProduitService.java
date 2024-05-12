@@ -4,10 +4,26 @@
  */
 package hezou.services;
 
+import hezou.entities.Produit;
+import java.util.List;
+
 /**
  *
  * @author BEKE hezou
  */
 public interface ProduitService {
+     
+    void addProduit(Produit produit);
     
+    
+    void updateProduit(Produit produit);
+    
+   
+    void deleteProduit(int idProduit);
+    
+    
+    Produit getProduitById(int idProduit);
+    
+    
+    List<Produit> getAllProduits();
 }

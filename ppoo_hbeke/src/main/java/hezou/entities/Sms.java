@@ -4,10 +4,62 @@
  */
 package hezou.entities;
 
+import java.util.Date;
+
 /**
  *
  * @author BEKE hezou
  */
 public class Sms {
+    private int id;
+    private String contenu;
+    private boolean statut;
+    private int idClient;
+    private Date dateEnvoi;
+
+    // Getters and setters
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getContenu() {
+        return contenu;
+    }
+
+    public void setContenu(String contenu) {
+        if (contenu != null && contenu.length() <= 255) {
+            this.contenu = contenu;
+        } else {
+            throw new IllegalArgumentException("Le contenu du SMS ne peut pas dépasser 255 caractères.");
+        }
+    }
+
+    public boolean isStatut() {
+        return statut;
+    }
+
+    public void setStatut(boolean statut) {
+        this.statut = statut;
+    }
+
+    public int getIdClient() {
+        return idClient;
+    }
+
+    public void setIdClient(int idClient) {
+        this.idClient = idClient;
+    }
+
+    public Date getDateEnvoi() {
+        return dateEnvoi;
+    }
+
+    public void setDateEnvoi(Date dateEnvoi) {
+        this.dateEnvoi = dateEnvoi;
+    }
     
 }

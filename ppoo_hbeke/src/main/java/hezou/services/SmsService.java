@@ -4,10 +4,28 @@
  */
 package hezou.services;
 
+import hezou.entities.Sms;
+import java.util.List;
+
 /**
  *
  * @author BEKE hezou
  */
 public interface SmsService {
+     void envoyerSMS(Sms sms);
+    
+   
+    void updateStatutSMS(int Id, boolean statut);
+    
+   
+    void deleteSMS(int id);
+    
+   
+    Sms getSMSById(int Id);
+    
+   
+    List<Sms> getSMSByclientId(int IdClient);
+    
+    List<Sms> getAllSMS();
     
 }
