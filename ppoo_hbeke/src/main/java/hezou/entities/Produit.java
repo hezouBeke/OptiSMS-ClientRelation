@@ -19,6 +19,10 @@ public class Produit {
         this.actif = actif;
     }
 
+    public Produit() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
 
     public void setLibelle(String libelle) {
         this.libelle = libelle;

@@ -17,7 +17,14 @@ public class Sms {
     private int idClient;
     private Date dateEnvoi;
 
-    // Getters and setters
+     // Constructeur
+    public Sms(int id, String contenu, boolean statut, int idClient, Date dateEnvoi) {
+        this.id = id;
+        this.contenu = contenu;
+        this.statut = statut;
+        this.idClient = idClient;
+        this.dateEnvoi = dateEnvoi;
+    }
     public int getId() {
         return id;
     }

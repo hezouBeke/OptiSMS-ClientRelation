@@ -61,5 +61,26 @@ public List<Produit> getAllProduits() {
     }
     return produits;
 }
+@Override
+public Produit getProduitByName(String nomProduit) {
+    Produit produit = null;
+    try (Connection connection = DriverManager.getConnection(URL, UTILISATEUR, MOT_DE_PASSE)) {
+        String sql = "SELECT * FROM produits WHERE libelle = ?";
+        try (PreparedStatement statement = connection.prepareStatement(sql)) {
+            statement.setString(1, nomProduit);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    produit = new Produit();
+                    produit.setLibelle(resultSet.getString("libelle"));
+                    produit.setActif(resultSet.getBoolean("actif"));
+                }
+            }
+        }
+    } catch (SQLException e) {
+        System.out.println("Erreur lors de la récupération du produit : " + e.getMessage());
+    }
+    return produit;
+}
+
 
 }

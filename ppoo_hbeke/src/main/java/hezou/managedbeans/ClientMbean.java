@@ -14,7 +14,7 @@ import hezou.services.ClientService;
 public class ClientMbean {
     private ClientService clientService;
   public void addFourClients() {
-        // Ajoutez quatre clients avec des informations différentes
+       
         addClient("Doe", "John", "123456789");
         addClient("Smith", "Alice", "987654321");
         addClient("Johnson", "Michael", "555555555");

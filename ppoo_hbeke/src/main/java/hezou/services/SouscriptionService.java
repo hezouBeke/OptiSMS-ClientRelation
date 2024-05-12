@@ -5,8 +5,10 @@
 package hezou.services;
 
 import hezou.entities.Client;
+import hezou.entities.ClientParticulier;
 import hezou.entities.Produit;
 import hezou.entities.Souscription;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -29,4 +31,8 @@ public interface SouscriptionService {
     List<Souscription> getAllSouscriptions();
 
     public void souscrireProduit(Client client1, Produit epargne);
+    
+    public void enregistrerSMS(String contenu, int idClient, Date dateEnvoi);
+    void souscrireProduitClientParticulier(ClientParticulier clientParticulier, Produit produit);
+    
 }

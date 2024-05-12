@@ -9,6 +9,7 @@ package hezou.entities;
  * @author BEKE hezou
  */
 public class Client {
+    
     private int idClient;
     private String nom;
     private String prenom;

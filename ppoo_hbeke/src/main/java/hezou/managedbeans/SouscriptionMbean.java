@@ -21,8 +21,9 @@ public class SouscriptionMbean {
 
         private int idClient1; 
         private int idClient2; 
+        
     public void souscrireProduit() {
-        // Sélectionnez un client pour souscrire les produits "Epargne" et "Courant"
+        
         Client client1 = clientService.getClientById(idClient1); 
         Produit epargne = produitService.getProduitByName("Epargne");
         Produit courant = produitService.getProduitByName("Courant");
@@ -30,7 +31,7 @@ public class SouscriptionMbean {
         souscriptionService.souscrireProduit(client1, courant);
         System.out.println("Souscriptions aux produits pour client1 effectuées avec succès.");
         
-        // Sélectionnez un autre client pour souscrire le produit "Courant"
+ 
         Client client2 = clientService.getClientById(idClient2); 
         souscriptionService.souscrireProduit(client2, courant);
         System.out.println("Souscription au produit pour client2 effectuée avec succès.");
