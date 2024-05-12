@@ -13,7 +13,7 @@ import java.util.List;
  */
 public interface ClientService {
     
-    void ajouterClient(Client client);
+    void addClient(Client client);
     
     Client getClientById(int idClient);
     
